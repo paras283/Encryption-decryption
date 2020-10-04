@@ -1,5 +1,3 @@
-
-
 MORSE_CODE_DICT = { 'A':'.-', 'B':'-...', 
 
                     'C':'-.-.', 'D':'-..', 'E':'.', 
@@ -31,8 +29,6 @@ MORSE_CODE_DICT = { 'A':'.-', 'B':'-...',
                     '(':'-.--.', ')':'-.--.-'} 
 
   
-# Function to encrypt the string 
-# according to the morse code chart 
 
 def encrypt(message): 
 
@@ -42,23 +38,11 @@ def encrypt(message):
 
         if letter != ' ': 
 
-  
-
-            # Looks up the dictionary and adds the 
-
-            # correspponding morse code 
-
-            # along with a space to separate 
-
-            # morse codes for different characters 
+ 
 
             cipher += MORSE_CODE_DICT[letter] + ' '
 
-        else: 
-
-            # 1 space indicates different characters 
-
-            # and 2 indicates different words 
+        else:
 
             cipher += ' '
 
@@ -67,13 +51,16 @@ def encrypt(message):
     return cipher 
 
   
-
+# Function to decrypt the string 
+# from morse to english 
 
 def decrypt(message): 
 
   
 
-    
+    # extra space added at the end to access the 
+
+    # last morse code 
 
     message += ' '
 
@@ -142,7 +129,7 @@ def decrypt(message):
     return decipher 
 
   
- 
+# Hard-coded driver function to run the program 
 
 def restart():
     op=input("For encryption press E and for decryption press D:")
@@ -182,7 +169,30 @@ def restart():
         print("Wrong Choice")
     
        
-    
+    while True:
+        
+        answer =input('                   ** Run again? (y/n): ')
+        
+        if answer in ('y', 'n'):
+            break
+        
+        print(" ")
+        print('                             Invalid input.')
+        print(" ")
+        
+    if answer == 'y':
+        print(" ")
+        print("                 --------- * --------- * ---------")
+        print(" ")
+        restart()
+        
+    else:
+        print(" ")
+        print('                            **Goodbye**')   
+        print(" ")
+        an=input("                    Press ENTER to exit.")
+        print(an)
+        exit()
     
 
 def main():
@@ -225,7 +235,30 @@ def main():
         print("Wrong Choice")
     
        
-    
+    while True:
+        
+        answer =input('                   ** Run again? (y/n): ')
+        
+        if answer in ('y', 'n'):
+            break
+        
+        print(" ")
+        print('                             Invalid input.')
+        print(" ")
+        
+    if answer == 'y':
+        print(" ")
+        print("                 --------- * --------- * ---------")
+        print(" ")
+        restart()
+        
+    else:
+        print(" ")
+        print('                            **Goodbye**')   
+        print(" ")
+        an=input("                    Press ENTER to exit.")
+        print(an)
+        exit()
        
     
 
